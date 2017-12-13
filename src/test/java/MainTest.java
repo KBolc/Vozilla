@@ -18,7 +18,6 @@ import java.util.concurrent.TimeUnit;
 
         @BeforeClass
         public void setUp() {
-
             System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/lib/geckodriver.exe");
             System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + "/lib/chromedriver.exe");
             driver = new ChromeDriver();

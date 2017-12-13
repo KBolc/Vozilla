@@ -46,78 +46,49 @@ public class MainPage extends WaitForElementHelp{
     }
 
     public MainPage clickRegister(){
-        try {
-            Thread.sleep(time);
-            buttonRegister.click();
-        }catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
+        setWaitElementVisible(buttonLogin,driver);
+        buttonRegister.click();
         return this;
     }
 
     public MainPage clickLogin(){
-        try {
-            Thread.sleep(time);
-            buttonLogin.click();
-        }catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
+        setWaitElementVisible(buttonLogin,driver);
+        buttonLogin.click();
         return this;
     }
 
     public MainPage clickContact(){
-        try {
-            Thread.sleep(time);
-            contact.click();
-        }catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        setWaitElementVisible(contact,driver);
+        contact.click();
         return this;
     }
 
     public MainPage clickHelp(){
-        try {
-            Thread.sleep(time);
-            help.click();
-        }catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        setWaitElementVisible(help,driver);
+        help.click();
         return this;
     }
 
     public MainPage clickMap(){
-        try {
-            Thread.sleep(time);
-            map.click();
-        }catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        setWaitElementVisible(map,driver);
+        map.click();
         return this;
     }
 
     public MainPage clickPayments(){
-        try {
-            Thread.sleep(2000);
-            payments.click();
-        }catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        setWaitElementVisible(payments,driver);
+        payments.click();
         return this;
     }
 
     public MainPage clickHome(){
-        try {
-            Thread.sleep(time);
-            home.click();
-        }catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        setWaitElementVisible(home,driver);
+        home.click();
         return this;
     }
 
     public MainPage selectLanguage(){
+        setWaitElementVisible(selectLanguage,driver);
         selectLanguage.click();
         return this;
     }

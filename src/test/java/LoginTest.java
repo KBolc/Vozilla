@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class LoginTest extends MainTest {
+
     @Test
     public void loginCorrect() {
         MainPage mainPage = new MainPage(driver);

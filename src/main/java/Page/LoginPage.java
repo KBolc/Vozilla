@@ -1,12 +1,13 @@
 package Page;
 
+import Help.WaitForElementHelp;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class LoginPage extends WaitForElementHelp{
     WebDriver driver;
     int time = 800;
 
@@ -35,52 +36,32 @@ public class LoginPage {
     }
 
     public LoginPage writeLogin(String email){
-        try {
-            Thread.sleep(time);
-            login.sendKeys(email);
-        }catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        setWaitElementVisible(login,driver);
+        login.sendKeys(email);
         return this;
     }
 
     public LoginPage writePassord(String password){
-        try {
-            Thread.sleep(time);
-            passwordIN.sendKeys(password);
-        }catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        setWaitElementVisible(login,driver);
+        passwordIN.sendKeys(password);
         return this;
     }
 
     public LoginPage clickLogin(){
-            try {
-                Thread.sleep(time);
-                buttonLogIn.click();
-            }catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        setWaitElementVisible(buttonLogIn,driver);
+        buttonLogIn.click();
             return this;
     }
 
     public LoginPage clickForgotPassword(){
-        try {
-            Thread.sleep(time);
-            buttonForgotPassword.click();
-        }catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        setWaitElementVisible(buttonForgotPassword,driver);
+        buttonForgotPassword.click();
         return this;
     }
 
     public LoginPage clickRegister(){
-        try {
-            Thread.sleep(time);
-            register.click();
-        }catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        setWaitElementVisible(register,driver);
+        register.click();
         return this;
     }
 
