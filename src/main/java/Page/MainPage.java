@@ -53,6 +53,7 @@ public class MainPage extends WaitForElementHelp{
 
     public MainPage clickLogin(){
         setWaitElementVisible(buttonLogin,driver);
+        setWaitVisible(driver, 500);
         buttonLogin.click();
         return this;
     }

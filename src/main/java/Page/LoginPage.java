@@ -49,6 +49,7 @@ public class LoginPage extends WaitForElementHelp{
 
     public LoginPage clickLogin(){
         setWaitElementVisible(buttonLogIn,driver);
+        setWaitVisible(driver, 500);
         buttonLogIn.click();
             return this;
     }
